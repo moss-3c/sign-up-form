@@ -1,18 +1,41 @@
+@font-face {
+    font-family: 'Mukta Vaani';
+    src: url('./fonts/MuktaVaani-Regular.woff2') format('woff2'),
+        url('./fonts/MuktaVaani-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Norse';
+    src: url('./fonts/Norse-Bold.woff2') format('woff2'),
+        url('./fonts/Norse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Mukta Vaani', 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+}
+
+
 body {
     display: flex;
     margin: 0px;
     padding: 0px;
 }
 .sidebar{
-   
+    position: relative;
     background-image: url("img/sidebar-background.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
     width: 30vw;
-    position: relative;
-
+    
 }
+
 
 .logo {
     display: flex;
@@ -29,7 +52,8 @@ body {
     padding: 2rem;
     text-align: center;
     display: border-box;
-    font-size: 1.9rem;
+    font-size: 6rem;
+    font-family: 'Norse';
 }
 
 img[src="./img/odin-lined.png"] {
@@ -38,10 +62,14 @@ img[src="./img/odin-lined.png"] {
 }
 
 .attribution {
-    color: white;
+    color: rgba(228, 233, 248, 0.466);
     text-align: center;
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 0;
     right: 0;
+    a {
+        color: rgba(127, 193, 255, 0.486);
+        text-decoration-style: dotted;
+    }
 }
