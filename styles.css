@@ -20,14 +20,15 @@
 
 body {
     font-family: 'Lexend Deca', 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-}
-
-
-body {
     display: flex;
     margin: 0px;
     padding: 0px;
+    --light-gray: rgb(65, 65, 65);
+    --lighter-gray: rgb(199, 199, 199);
+    --shadow: rgba(218, 218, 218, 0.5);
+
 }
+
 .sidebar{
     position: relative;
     background-image: url("img/sidebar-background.jpg");
@@ -46,7 +47,7 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     position: absolute;
-    top: 5rem;
+    top: 10rem;
     left: 0;
     right: 0;
     color: white;
@@ -77,31 +78,96 @@ img[src="./img/odin-lined.png"] {
 }
 
 .main {
+    --left-padding: 2rem;
     display: flex;
     flex-direction: column;
-    font-size: 1.1rem;
-    background-color: rgba(75, 119, 161, 0.253);
-    
+    flex-basis: 100%;
+   
+    background-color: rgba(249,250,251,255);
  
 }
 
 .main > * {
-    flex: 1 1 0%;  
+    flex: 1 1 1rem; 
+    padding: 2rem; 
+}
+
+.top, .bottom {
+    flex-basis: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 1.3rem;
 }
 
 form {
-    background-color: rgba(92, 92, 102, 0.459);
-
+    background-color: rgba(255,255,255,255);
+    box-shadow: 0rem 0.5rem 1rem var(--shadow)
 }
 
 .form-container  {
     display: flex;
+    gap: 1.5rem;
 }
-.form-column {
-    display: flex;
-    flex-direction: column;
-}
-input {
-    width: 8rem;
+.form-header{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--light-gray);
 }
 
+.form-column > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.7rem;
+    margin-right: 2rem;
+}
+
+input {
+    width: 13rem;
+    border: 1px solid var(--lighter-gray);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-family: 'Lexend Deca', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    padding: 0.4rem;
+}
+input:focus{
+    outline: none;
+    border: 1px solid rgb(161, 161, 233);
+    box-shadow: 0 0 0.5rem var(--shadow);
+}
+input:user-invalid{
+    outline: none;
+    border: 1px solid rgb(233, 161, 161);
+    box-shadow: 0 0 0.5rem var(--shadow);
+}
+
+label {
+    font-size: x-small;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    color: var(--light-gray);
+}
+
+
+
+.bottom {
+    font-size: 0.9rem;
+
+}
+.create-account{
+    margin: 1rem 0;   
+    font-family: 'Lexend Deca', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem 2.8rem;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(89, 106, 133);
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0.3rem 0.3rem 0.2rem var(--lighter-gray)
+}
